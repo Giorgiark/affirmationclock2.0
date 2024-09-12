@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  direction: row;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-family: "Karla", sans-serif;
+}
+
+#text {
+  display: inline;
+}
+#clock {
+  padding: 50px;
+  color: #292623;
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#time {
+  font-size: 100px;
+}
+
+#settings-btn {
+  background-color: transparent;
+  border-radius: 50px;
+  border: 0px transparent;
+  color: black;
+  font-size: 1rem;
+  margin: 0.313rem;
+  padding: 0.313rem 0.5rem;
+  text-align: center;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+/* Button visibility on hover */
+#setting-wrapper {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+ 
+}
+
+body:hover #setting-wrapper {
+  opacity: 1;
+ 
+}
+
+#settings-btn {
+cursor:hand;
+}
+/*Modal CSS */
+#settings-modal {
+  font-family: Rubik;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  width: 400px;
+  font-family: Rubik;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f6f3;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  position: relative;
+}
+
+.modal-wrapper {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.setting-option {
+  text-align: center;
+  font-family: Rubik;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+}
+
+.close-btn {
+  color: #000;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#save-btn {
+  margin-top: 10px;
+  width: 100%;
+  font-family: Rubik;
+  line-height: 14px;
+  font-size: 14px;
+  text-align: center;
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#save-btn:hover {
+  background-color: #b8f148;
+  color: black;
+}
+
+#background-color,
+#font-color,
+#font-family,
+#custom-text {
+  background-color: white;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 6px;
+  width: 100%;
+  font-family: Karla;
+  font-size: 16px;
+  cursor: inherit;
+  line-height: inherit;
+}
+
+
+.select, #custom-text, #background-color, #font-color, #font-family {
+  background-color: white;
+  border: none;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+
+/* Small screens (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #clock {
+    padding: 20px;
+    font-size: 16px;
+    text-align: center;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+  }
+
+  #time {
+    font-size: 40px;
+  }
+
+  #settings-btn {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  #save-btn {
+    font-size: 12px;
+  }
+}
+
+/* Medium screens (tablets, 600px to 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  #clock {
+    padding: 30px;
+    font-size: 18px;
+    text-align: center;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+  }
+
+  #time {
+    font-size: 55px;
+  }
+
+  #settings-btn {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .modal-content {
+    width: 80%;
+    padding: 25px;
+  }
+
+  #save-btn {
+    font-size: 13px;
+  }
+}
+
+/* Large screens (desktops, 768px and up) */
+@media only screen and (min-width: 769px) {
+  #clock {
+    padding: 50px;
+    font-size: 20px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #time {
+    font-size: 70px;
+  }
+
+  #settings-btn {
+    font-size: 1rem;
+    padding: 0.313rem 0.5rem;
+  }
+
+  .modal-content {
+    width: 300px;
+    padding: 30px;
+  }
+
+  #save-btn {
+    font-size: 14px;
+  }
+}
